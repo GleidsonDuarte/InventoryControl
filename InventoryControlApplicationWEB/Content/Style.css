@@ -1,0 +1,98 @@
+﻿/* Master Page */
+body {
+    margin: 0px;
+    height: 258px;
+}
+
+#NavigationMenu {
+    height: 25px;
+    background-color: #585bdb;
+    padding: 10px 20px;
+}
+
+    #NavigationMenu a {
+        font-family: Calibri;
+        font-size: 17px;
+        color: #e0cdcd;
+    }
+
+        #NavigationMenu a:hover {
+            color: white;
+        }
+
+    #NavigationMenu div {
+        clear: none !important;
+    }
+
+#LoginView_SignIn {
+    text-decoration: none;
+    float: right;
+}
+
+#LoginView_UserName {
+    font-family: Calibri;
+    font-size: 17px;
+    color: chartreuse;
+    margin-top: 1px;
+    margin-right: 10px;
+    float: right;
+}
+
+#LoginView_UserStatus {
+    text-decoration: none;
+    float: right;
+}
+
+#LoginView_ChangePassword {
+    text-decoration: none;
+    margin-right: 10px;
+    float: right;
+}
+
+#footer {
+    height: 150px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #585bdb;
+}
+/* End */
+
+/* Default Page */
+#Content {
+    height: 200px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: green;
+}
+
+.ImageAbout {
+    height: 200px;
+    width: 250px;
+    float: left;
+}
+
+.TextAbout {
+    background-color: blue;
+    height: 200px;
+    width: 250px;
+    float: left;
+}
+/* End */
+
+/* Login Page */
+#ContentPlaceHolder_LoginIn {
+    margin: 0 auto;
+}
+/* End */
+
+/* CreateUser Page */
+#ContentPlaceHolder_CreateUserInventoryControl {
+    margin: 0 auto;
+}
+/* End */
+
+/* ChangePassword Page */
+#ContentPlaceHolder_ChangeUserPassword {
+    margin: 0 auto;
+}
+/* End */

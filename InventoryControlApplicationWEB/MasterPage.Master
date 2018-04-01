@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="InventoryControlApplicationWEB.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="NavigationMenu">
+            <asp:Menu ID="MenuPublic" runat="server" Orientation="Horizontal" SkipLinkText="">
+                <Items>
+                    <asp:MenuItem Text="Sobre" Value="About"></asp:MenuItem>
+                    <asp:MenuItem Text="Contato" Value="Contact"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+
+            <asp:LoginView ID="LoginViewMenuPrivate" runat="server">
+                <AnonymousTemplate>
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    <asp:Menu ID="MenuPrivate" runat="server">
+                        <Items>
+                            <asp:MenuItem Text="Estoque" Value="InventoryControl" NavigateUrl="~/Pages/Private/RegisterProduct.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </LoggedInTemplate>
+            </asp:LoginView>
+
+            <asp:LoginView ID="LoginView" runat="server">
+                <AnonymousTemplate>
+                    <asp:HyperLink ID="SignIn" runat="server" NavigateUrl="~/Pages/Public/Login.aspx">Sign in</asp:HyperLink>
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                        <asp:LoginStatus ID="UserStatus" runat="server" LoginText="Entrar" LogoutAction="Redirect" LogoutPageUrl="~/Pages/Public/Default.aspx" LogoutText="Sair" />
+                        <asp:LoginName ID="UserName" runat="server" />
+                        <asp:HyperLink ID="ChangePassword" runat="server" NavigateUrl="~/Pages/Private/ChangePassword.aspx">Alterar senha</asp:HyperLink>
+                </LoggedInTemplate>
+            </asp:LoginView>
+        </div>
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+        </div>
+    </form>
+</body>
+</html>
