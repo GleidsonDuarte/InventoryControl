@@ -49,13 +49,40 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtMainDescription;
         
         /// <summary>
-        /// TxtCategoryDescription control.
+        /// RequiredFieldValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCategoryDescription;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
+        /// REVMainDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVMainDescription;
+        
+        /// <summary>
+        /// DdlCategoryDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DdlCategoryDescription;
+        
+        /// <summary>
+        /// SqlDataSourceCategoryDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceCategoryDescription;
         
         /// <summary>
         /// TxtSupplier control.
@@ -67,6 +94,24 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtSupplier;
         
         /// <summary>
+        /// RFVSupplier control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSupplier;
+        
+        /// <summary>
+        /// REVSupplier control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVSupplier;
+        
+        /// <summary>
         /// TxtInternalCode control.
         /// </summary>
         /// <remarks>
@@ -74,6 +119,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtInternalCode;
+        
+        /// <summary>
+        /// RFVInternalCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVInternalCode;
         
         /// <summary>
         /// TxtEANCode control.
@@ -94,6 +148,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.DropDownList DdlProductType;
         
         /// <summary>
+        /// SqlDataSourceProductType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceProductType;
+        
+        /// <summary>
         /// TxtCost control.
         /// </summary>
         /// <remarks>
@@ -101,6 +164,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtCost;
+        
+        /// <summary>
+        /// REVCost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVCost;
         
         /// <summary>
         /// TxtPrice control.
@@ -112,6 +184,24 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtPrice;
         
         /// <summary>
+        /// RFVPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVPrice;
+        
+        /// <summary>
+        /// REVPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVPrice;
+        
+        /// <summary>
         /// PnlActive control.
         /// </summary>
         /// <remarks>
@@ -121,15 +211,6 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.Panel PnlActive;
         
         /// <summary>
-        /// RbtActiveNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RbtActiveNo;
-        
-        /// <summary>
         /// RbtActiveYes control.
         /// </summary>
         /// <remarks>
@@ -137,6 +218,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton RbtActiveYes;
+        
+        /// <summary>
+        /// RbtActiveNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RbtActiveNo;
         
         /// <summary>
         /// PnlUnity control.
@@ -166,6 +256,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListInput;
         
         /// <summary>
+        /// SqlDataSourceUnityType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceUnityType;
+        
+        /// <summary>
         /// PnlOutput control.
         /// </summary>
         /// <remarks>
@@ -182,6 +281,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtQtdOutput;
+        
+        /// <summary>
+        /// RFVQtdOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVQtdOutput;
         
         /// <summary>
         /// DropDownListOutput control.
@@ -211,6 +319,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtImmobilized;
         
         /// <summary>
+        /// REVImmobilized control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVImmobilized;
+        
+        /// <summary>
         /// TxtConsumption control.
         /// </summary>
         /// <remarks>
@@ -220,6 +337,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtConsumption;
         
         /// <summary>
+        /// REVConsumption control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVConsumption;
+        
+        /// <summary>
         /// TxtResale control.
         /// </summary>
         /// <remarks>
@@ -227,6 +353,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtResale;
+        
+        /// <summary>
+        /// REVResale control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVResale;
         
         /// <summary>
         /// TxtMinimumResale control.
@@ -256,6 +391,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.Button BtnNext;
         
         /// <summary>
+        /// VSUVieProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VSUVieProduct;
+        
+        /// <summary>
         /// ViewDetails control.
         /// </summary>
         /// <remarks>
@@ -283,6 +427,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtWeight;
         
         /// <summary>
+        /// REVWeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVWeight;
+        
+        /// <summary>
         /// TxtWidth control.
         /// </summary>
         /// <remarks>
@@ -290,6 +443,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtWidth;
+        
+        /// <summary>
+        /// REVWidth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVWidth;
         
         /// <summary>
         /// TxtHeight control.
@@ -301,6 +463,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtHeight;
         
         /// <summary>
+        /// REVHeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVHeight;
+        
+        /// <summary>
         /// TxtLength control.
         /// </summary>
         /// <remarks>
@@ -308,6 +479,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtLength;
+        
+        /// <summary>
+        /// REVLength control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVLength;
         
         /// <summary>
         /// PnlDetails control.
@@ -326,33 +506,6 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CblDetails;
-        
-        /// <summary>
-        /// PnlControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PnlControl;
-        
-        /// <summary>
-        /// TxtDateCreation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDateCreation;
-        
-        /// <summary>
-        /// TxtLastChange control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtLastChange;
         
         /// <summary>
         /// PnlAttributes control.
@@ -391,6 +544,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtStockLocation;
         
         /// <summary>
+        /// REVStockLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVStockLocation;
+        
+        /// <summary>
         /// PnlObservations control.
         /// </summary>
         /// <remarks>
@@ -409,6 +571,15 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         protected global::System.Web.UI.WebControls.TextBox TxtObservations;
         
         /// <summary>
+        /// REVObservations control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator REVObservations;
+        
+        /// <summary>
         /// BtnBack control.
         /// </summary>
         /// <remarks>
@@ -425,5 +596,14 @@ namespace InventoryControlApplicationWEB.Pages.Private {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnSave;
+        
+        /// <summary>
+        /// VSUViewDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VSUViewDetails;
     }
 }

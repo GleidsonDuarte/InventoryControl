@@ -2,8 +2,8 @@
 {
     interface IBasicDAO
     {
-        bool CreateDAO();
-        bool AlterDAO();
-        bool DeleteDAO();
+        void CreateDAO();
+        void AlterDAO();
+        void DeleteDAO();
     }
 }

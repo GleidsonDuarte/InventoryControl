@@ -23,9 +23,12 @@
                 <AnonymousTemplate>
                 </AnonymousTemplate>
                 <LoggedInTemplate>
-                    <asp:Menu ID="MenuPrivate" runat="server">
+                    <asp:Menu ID="MenuPrivate" runat="server" Orientation="Horizontal">
                         <Items>
-                            <asp:MenuItem Text="Estoque" Value="InventoryControl" NavigateUrl="~/Pages/Private/RegisterProduct.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Estoque" Value="InventoryControl">
+                                <asp:MenuItem NavigateUrl="~/Pages/Private/RegisterProduct.aspx" Text="Adicionar produto" Value="AddProduct"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Pages/Private/AddUnity.aspx" Text="Adicionar Unidade" Value="AddUnity"></asp:MenuItem>
+                            </asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </LoggedInTemplate>

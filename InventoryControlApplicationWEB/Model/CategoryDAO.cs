@@ -4,17 +4,17 @@ namespace InventoryControlApplicationWEB.Model
 {
     public class CategoryDAO : Category, IBasicDAO
     {
-        public bool CreateDAO()
+        void IBasicDAO.CreateDAO()
         {
             throw new NotImplementedException();
         }
 
-        public bool AlterDAO()
+        void IBasicDAO.AlterDAO()
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteDAO()
+        void IBasicDAO.DeleteDAO()
         {
             throw new NotImplementedException();
         }

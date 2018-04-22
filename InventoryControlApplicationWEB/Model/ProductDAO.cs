@@ -15,74 +15,79 @@ namespace InventoryControlApplicationWEB.Model
             this.product = product;
         }
 
-        public bool CreateDAO()
+        public void CreateDAO()
         {
             try
             {
+                #region string Insert Command
                 string insertCommand = @"INSERT INTO PRODUCT (PRO_MAIN_DESCRIPTION,
-                                                              PRO_DESCRIPTION,
-                                                              PRO_CATEGORY_DESCRIPTION,
-                                                              PRO_SUPPLIER,
-                                                              PRO_INTERNAL_CODE,
-                                                              PRO_EAN_CODE,
-                                                              PRO_PRODUCT_TYPE,
-                                                              PRO_COST,
-                                                              PRO_PRICE,
-                                                              PRO_ACTIVE,
-                                                              PRO_UNITY_INPUT,
-                                                              PRO_UNITY_AMOUNT_OUTPUT,
-                                                              PRO_UNITY_OUTPUT,
-                                                              PRO_INVENTORY_IMMOBILIZED,
-                                                              PRO_INVENTORY_CONSUMPTION,
-                                                              PRO_INVENTORY_RESALE,
-                                                              PRO_INVENTORY_MINIMUM_RESALE,
-                                                              PRO_INVENTORY_MAXIMUM_RESALE,
-                                                              PRO_DETAIL_WEIGHT,
-                                                              PRO_DETAIL_WIDTH,
-                                                              PRO_DETAIL_HEIGHT,
-                                                              PRO_DETAIL_LENGTH,
-                                                              PRO_DETAIL_WARRANTY,
-                                                              PRO_DETAIL_SOLD_SEPARATELY,
-                                                              PRO_DETAIL_MARKETABLE_POS,
-                                                              PRO_CONTROL_DATE_CREATION,
-                                                              PRO_CONTROL_LAST_CHANGE,
-                                                              PRO_ATTRIBUTE_DESCRIPTION,
-                                                              PRO_ATTRIBUTE_CONTENT,
-                                                              PRO_STOCK_LOCATION,
-                                                              PRO_OBSERVATION)
+                                                               PRO_CATEGORY_DESCRIPTION,
+                                                               PRO_SUPPLIER,
+                                                               PRO_INTERNAL_CODE,
+                                                               PRO_EAN_CODE,
+                                                               PRO_PRODUCT_TYPE,
+                                                               PRO_COST,
+                                                               PRO_PRICE,
+                                                               PRO_ACTIVE,
+                                                               PRO_STOCK_LOCATION,
+                                                               PRO_OBSERVATION) 
+                                            VALUES (@MainDescription,
+                                                    @CategoryDescription,
+                                                    @Supplier,
+                                                    @InternalCode,
+                                                    @EANCode,
+                                                    @ProductType,
+                                                    @Cost,
+                                                    @Price,
+                                                    @Active,
+                                                    @StockLocation,
+                                                    @Observation);
 
-                                                      VALUES (@MainDescription,
-                                                              @CategoryDescription,
-                                                              @Supplier,
-                                                              @InternalCode,
-                                                              @EANCode,
-                                                              @ProductType,
-                                                              @Cost,
-                                                              @Price,
-                                                              @Active,
-                                                              @UnityInput,
-                                                              @UnityAmountOutput,
-                                                              @UnityOutput,
-                                                              @InventoryImmobilized,
-                                                              @InventoryConsumption,
-                                                              @InventoryResale,
-                                                              @InventoryMinimumResale,
-                                                              @InventoryMaximumResale,
-                                                              @DetailWeight,
-                                                              @DetailWidth,
-                                                              @DetailHeight,
-                                                              @DetailLength,
-                                                              @DetailWarranty,
-                                                              @DetailSoldSeparately,
-                                                              @DetailMarketablePOS,
-                                                              @ControlDateCreation,
-                                                              @ControlLastChange,
-                                                              @AttributeDescription,
-                                                              @AttributeContent,
-                                                              @StockLocation,
-                                                              @Observation);";
+                                            INSERT INTO UNITY (UNI_INPUT,
+                                                               UNI_OUTPUT,
+                                                               UNI_AMOUNT_OUTPUT) 
+                                            VALUES (@UnityInput,
+                                                    @UnityOutput,
+                                                    @UnityAmountOutput);
+
+                                            INSERT INTO INVENTORY (INV_IMMOBILIZED,
+                                                                   INV_CONSUMPTION,
+                                                                   INV_RESALE,
+                                                                   INV_MINIMUM_RESALE,
+                                                                   INV_MAXIMUM_RESALE) 
+                                            VALUES (@InventoryImmobilized,
+                                                    @InventoryConsumption,
+                                                    @InventoryResale,
+                                                    @InventoryMinimumResale,
+                                                    @InventoryMaximumResale);
+
+                                            INSERT INTO DETAIL (DET_WEIGHT,
+                                                                DET_WIDTH,
+                                                                DET_HEIGHT,
+                                                                DET_LENGTH,
+                                                                DET_WARRANTY,
+                                                                DET_SOLD_SEPARATELY,
+                                                                DET_MARKETABLE_POS) 
+                                            VALUES (@DetailWeight,
+                                                    @DetailWidth,
+                                                    @DetailHeight,
+                                                    @DetailLength,
+                                                    @DetailWarranty,
+                                                    @DetailSoldSeparately,
+                                                    @DetailMarketablePOS);
+
+                                            INSERT INTO CONTROLS (CON_DATE_CREATION)
+                                            VALUES (@ControlDateCreation);
+
+                                            INSERT INTO ATTRIBUTE (ATT_DESCRIPTION,
+                                                                   ATT_CONTENT) 
+                                            VALUES (@AttributeDescription,
+                                                    @AttributeContent);";
+                #endregion
 
                 connection.Open();
+
+                #region Command Add
                 SqlCommand command = new SqlCommand(insertCommand, connection);
                 command.Parameters.AddWithValue("@MainDescription", product.MainDescription);
                 command.Parameters.AddWithValue("@CategoryDescription", product.Category.Description);
@@ -109,11 +114,12 @@ namespace InventoryControlApplicationWEB.Model
                 command.Parameters.AddWithValue("@DetailSoldSeparately", product.Detail.SoldSeparately);
                 command.Parameters.AddWithValue("@DetailMarketablePOS", product.Detail.MarketablePOS);
                 command.Parameters.AddWithValue("@ControlDateCreation", product.Control.DateCreation);
-                command.Parameters.AddWithValue("@ControlLastChange", product.Control.LastChange);
                 command.Parameters.AddWithValue("@AttributeDescription", product.Attribute.Description);
                 command.Parameters.AddWithValue("@AttributeContent", product.Attribute.Content);
                 command.Parameters.AddWithValue("@StockLocation", product.StockLocation);
                 command.Parameters.AddWithValue("@Observation", product.Observation);
+                #endregion
+
                 command.ExecuteReader();
             }
             catch (Exception)
@@ -126,12 +132,12 @@ namespace InventoryControlApplicationWEB.Model
             }
         }
 
-        public bool AlterDAO()
+        public void AlterDAO()
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteDAO()
+        public void DeleteDAO()
         {
             throw new NotImplementedException();
         }

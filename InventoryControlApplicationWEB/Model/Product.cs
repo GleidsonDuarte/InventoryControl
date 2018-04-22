@@ -1,4 +1,7 @@
-﻿namespace InventoryControlApplicationWEB.Model
+﻿using System;
+using System.Web.UI.WebControls;
+
+namespace InventoryControlApplicationWEB.Model
 {
     public class Product
     {
@@ -18,5 +21,24 @@
         public Attribute Attribute { get; set; }
         public string StockLocation { get; set; }
         public string Observation { get; set; }
+
+        public Product()
+        {
+            Category = new Category();
+            Unity = new Unity();
+            Inventory = new Inventory();
+            Detail = new Detail();
+            Control = new Control();
+            Attribute = new Attribute();
+        }
+
+        public string ValidateComponent(string textBox)
+        {
+            if (!String.IsNullOrEmpty(textBox))
+            {
+                return textBox;
+            }
+            return "0";
+        }
     }
 }

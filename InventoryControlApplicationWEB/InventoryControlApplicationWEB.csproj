@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
+    <Content Include="Pages\Private\AddUnity.aspx" />
     <Content Include="Pages\Private\RegisterProduct.aspx" />
     <Content Include="Pages\Private\ChangePassword.aspx" />
     <Content Include="Pages\Public\PasswordRecovery.aspx" />
@@ -104,10 +105,15 @@
     <Compile Include="Model\Inventory.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductDAO.cs" />
-    <Compile Include="Model\ProductEnum.cs" />
     <Compile Include="Model\Unity.cs" />
     <Compile Include="Model\UnityDAO.cs" />
-    <Compile Include="Model\UnityEnum.cs" />
+    <Compile Include="Pages\Private\AddUnity.aspx.cs">
+      <DependentUpon>AddUnity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Private\AddUnity.aspx.designer.cs">
+      <DependentUpon>AddUnity.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Private\RegisterProduct.aspx.cs">
       <DependentUpon>RegisterProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
